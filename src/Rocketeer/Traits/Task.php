@@ -230,7 +230,7 @@ abstract class Task extends Bash
 			$commands[] = sprintf('chown -R %s:%s %s', $user, $group, $folder);
 		}
 
-		return $this->runForCurrentRelease($commands);
+		// return $this->runForCurrentRelease($commands);
 	}
 
 	////////////////////////////////////////////////////////////////////
