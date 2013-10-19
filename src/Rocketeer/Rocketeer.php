@@ -189,6 +189,12 @@ class Rocketeer
 		$fallback = trim($fallback[0]) ?: 'master';
 		$branch   = $this->getOption('scm.branch') ?: $fallback;
 
+		if($this->getStage() == 'staging') {
+			$branch = 'staging';
+		} else {
+			$branch = 'master';
+		}
+
 		return $branch;
 	}
 
